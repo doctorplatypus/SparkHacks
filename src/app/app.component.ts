@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [GoogleMapsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'sparkhacks-app';
+  center: google.maps.LatLngLiteral = {lat: 41.8747826293364, lng: -87.65132618590007};
 }
